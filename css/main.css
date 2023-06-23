@@ -1,0 +1,493 @@
+* {
+    /* outline: 1px solid tomato; */
+}
+
+:root {
+    --mc: #F6F5E8;
+    --sc: #4B5A56;
+    --dc: #333333;
+    --bc: #ECE3D3;
+    --wc: #ffffff;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.sec .title h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.sec .title p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+
+
+
+
+/* header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--mc);
+}
+
+.header.on {
+    background: var(--dc);
+}
+
+.header .header_wrap {
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+    transition: 0.5s;
+}
+
+.header.on .header_wrap {
+    filter: invert();
+    height: 70px;
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header h1 img {
+    height: 100px
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 60px;
+}
+
+.header .search {
+    margin: 0 0 0 50px;
+}
+
+.header .search i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* main_slide */
+.main_visual {
+    position: relative;
+}
+
+.main_visual .itm {
+    height: calc(100vh - 100px);
+}
+
+.main_visual .itm01 {
+    background: url(../images/Aesop_mainbg_01.jpg) no-repeat center bottom 90%/cover;
+}
+
+.main_visual .itm02 {
+    background: url(../images/Aesop_mainbg_02.jpg) no-repeat center bottom 90%/cover;
+}
+
+.main_visual .itm03 {
+    background: url(../images/Aesop_mainbg_03.jpg) no-repeat center bottom 70%/cover;
+}
+
+.main_visual .itm p {
+    position: absolute;
+    top: 50%;
+    left: 56%;
+    transform: translate(0, -50%);
+    margin: 0 0 0 -700px;
+
+    color: var(--dc);
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main_visual .itm02 p {
+    color: var(--wc);
+}
+
+
+.main_visual .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    font-size: 0;
+    width: 100px;
+    height: 100px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+}
+
+.main_visual .slick-prev {
+    margin: 0 0 0 -700px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.main_visual .slick-next {
+    margin: 0 0 0 700px;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.main_visual .slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 23%;
+    transform: translate(-50%, 0);
+}
+
+.main_visual .slick-dots>* {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.main_visual .slick-dots li button {
+    background: var(--sc);
+    padding: 2px;
+    font-size: 0px;
+    width: 40px;
+    height: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.main_visual .slick-dots li.slick-active button {
+    background: var(--bc);
+}
+
+
+
+/* main_content */
+.main_content .title {
+    margin: 0 0 20px 0;
+}
+
+.main_content button {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    display: inline-block;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.main_content button.active {
+    background-color: var(--bc);
+}
+
+.main_content .tabs {
+    border-top: 2px solid var(--bc);
+    border-bottom: 2px solid var(--bc);
+
+    padding: 30px;
+}
+
+.main_content .tab {
+    display: none;
+}
+
+.main_content .tab.active {
+    display: block;
+}
+
+.main_content .slider {
+    max-width: 1200px;
+}
+
+.main_content .item img {
+    height: 400px;
+    width: 600px;
+    object-fit: contain;
+}
+
+.main_content .slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.main_content .slick-dots li {
+    display: inline-block;
+}
+
+.main_content .slick-dots li button {
+    border: none;
+    outline: none;
+
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    color: #fff;
+    margin: 0 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main_content .slick-dots li.slick-active button {
+    background: var(--sc);
+}
+
+
+
+/* main_banner */
+.main_banner {
+    background: url(../images/Aesop_banner.webp) no-repeat fixed 50% center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.main_banner .title p {
+    margin: 0 0 60px 0;
+}
+
+.main_banner .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.main_banner .content .img_box {
+    /* margin: 0 0 20px 0; */
+}
+
+.main_banner .content .img_box img {
+    width: 300px;
+    transition: 1s;
+}
+
+
+.main_banner .content .img_box:hover img {
+    transform: scale(1.2);
+}
+
+
+
+/* main_guide */
+.main_guide {
+    position: relative;
+}
+
+.main_guide .content {
+    max-width: 100%;
+    padding: 0 0;
+}
+
+.main_guide .content .title {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.main_guide .big_slide figure {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 50px;
+
+    transition: 1s;
+}
+
+.main_guide .big_slide figure:not(.slick-current) {
+    filter: grayscale(1);
+}
+
+.main_guide .tab_txt {
+    position: absolute;
+    top: 430px;
+    left: 47%;
+    margin: 0 0 0 -497px;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--wc);
+
+    width: 320px;
+    height: 420px;
+    padding: 40px 30px;
+}
+
+.main_guide .tab_txt .itm {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main_guide .tab_txt .itm h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.main_guide .tab_txt .itm p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+.main_guide .itm.on {
+    display: flex;
+}
+
+.main_guide .tab_arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+    max-width: 1300px;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+
+    color: #333;
+}
+
+.main_guide .tab_arrows .left {
+    position: absolute;
+    left: -463px;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.main_guide .tab_arrows .left::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #333;
+}
+
+.main_guide .tab_arrows .right {
+    position: absolute;
+    right: -613px;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.main_guide .tab_arrows .right::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #333;
+}
+
+.main_guide .slick-dots {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.main_guide .slick-dots li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--bc);
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.main_guide .slick-dots li.slick-active {
+    background: #333;
+}
+
+.main_guide .slick-dots button {
+    display: none;
+}
+
+
+
+/* footer */
+.footer {
+    background: var(--dc);
+    color: var(--wc);
+    text-align: center;
+}
+
+.footer .top .content {
+    padding: 50px 0;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footer .top .content h3 {
+    font-size: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--mc);
+
+    margin: 0 0 15px 0;
+    font-weight: 500;
+}
+
+.footer .top .content a {
+    display: block;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.footer .bottom {
+    border-top: 1px solid var(--mc);
+    padding: 30px;
+}
+
+.to_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.to_top i {
+    background: var(--sc);
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+
+    cursor: pointer;
+}
